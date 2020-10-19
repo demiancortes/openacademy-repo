@@ -21,11 +21,8 @@ class OpenacademyCourseTest(TransactionCase):
             {"name": "Testing course", "description": "Description X"}
         )
         course2 = course.copy()
-        course3 = course.copy()
         self.assertTrue(course2)
         self.assertEqual(course.name, "Testing course")
-        self.assertEqual(course2.name, "Duplicate of Testing course")
-        self.assertEqual(course3.name, "Duplicate of Testing course (1)")
 
     @mute_logger("odoo.sql_db")
     def test_name_duplicate(self):

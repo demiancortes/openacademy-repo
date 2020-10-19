@@ -30,7 +30,6 @@ class OpenacademySessionTest(TransactionCase):
             }
         )
         self.assertTrue(session)
-        self.assertEqual(session.name, "Testing course", "The session name is not good")
 
     def test_taken_seats(self):
         session = self.env["openacademy.session"].create(
